@@ -45,6 +45,7 @@
       <li><a href="/service-areas/">Service Areas</a></li>
       <li><a href="/pricing/">Pricing</a></li>
       <li><a href="/our-process/">Our Process</a></li>
+      <li><a href="/blog/">Blog</a></li>
       <li><a href="/about/">About</a></li>
       <li><a href="/request-a-quote/" class="active">Request a Quote</a></li>
     </ul>
@@ -80,40 +81,14 @@
   </div>
 
   <h2>Request your free quote</h2>
-  <form method="post" action="/request-a-quote/" style="max-width:520px;">
-    <div class="form-field">
-      <label for="rname">Your name</label>
-      <input type="text" id="rname" name="name" autocomplete="name" required>
+  <form data-quote-wizard novalidate style="max-width:640px;">
+    <div data-wizard-progress></div>
+    <div data-wizard-status role="status" aria-live="polite"></div>
+    <div data-wizard-steps></div>
+    <div data-wizard-nav class="wiz-nav">
+      <button type="button" data-wizard-back class="btn-secondary" hidden>Back</button>
+      <button type="button" data-wizard-next class="btn-primary">Next</button>
     </div>
-    <div class="form-field">
-      <label for="rphone">Phone number</label>
-      <input type="tel" id="rphone" name="phone" autocomplete="tel" required>
-    </div>
-    <div class="form-field">
-      <label for="remail">Email address</label>
-      <input type="email" id="remail" name="email" autocomplete="email" required>
-    </div>
-    <div class="form-field">
-      <label for="rfacility">Facility type</label>
-      <select id="rfacility" name="facility">
-        <option value="">Select one</option>
-        <option>Office building</option>
-        <option>Retail or restaurant</option>
-        <option>Medical or dental office</option>
-        <option>Warehouse or industrial</option>
-        <option>Other commercial</option>
-      </select>
-    </div>
-    <div class="form-field">
-      <label for="rsqft">Approximate square footage</label>
-      <input type="text" id="rsqft" name="sqft" placeholder="e.g. 4,500">
-    </div>
-    <div class="form-field">
-      <label for="rmsg">Anything else we should know</label>
-      <textarea id="rmsg" name="message" rows="4"></textarea>
-    </div>
-    <button type="submit" class="btn-primary">Request My Free Quote</button>
-    <p class="form-note" style="margin-top:10px;">Next business day response &middot; No obligation &middot; (866) 958-8773</p>
   </form>
 </div>
 <footer>
@@ -150,6 +125,7 @@
       <a href="/our-process/">Our Process</a>
       <a href="/pricing/">Pricing</a>
       <a href="/faq/">FAQ</a>
+      <a href="/blog/">Blog</a>
       <a href="/contact/">Contact</a>
       <a href="/request-a-quote/">Request a Quote</a>
     </div>
@@ -157,8 +133,9 @@
   <div class="footer-bottom">
     <span>&copy; 2025 Hugo Commercial Cleaners &mdash; Serving Hugo, MN and surrounding communities</span>
     <span>22 years in business &middot; Insured &amp; bonded &middot; <a href="/request-a-quote/" style="color:#888;">Get a free quote</a></span>
+    <span class="footer-credit">Built and Maintained by <a href="https://infin8content.com/" style="color:#888;">Infin8Content</a></span>
   </div>
 </footer>
-<script src="/form-handler.js"></script>
+<script src="/assets/js/quote-wizard.js" defer></script>
 </body>
 </html>
